@@ -9,6 +9,6 @@ urlpatterns = [
 # ---------- crud -----------------------------------------
     path('crud', views.crud, name='crud'),
     path('crud/crear', views.crear, name='crear'),
-    path('crud/editar', views.editar, name='editar'),
-    
+    path('crud/editar/<int:id>', views.editar, name='editar'),
+    path('eliminar/<int:id>', views.eliminar, name='eliminar'), 
 ]
