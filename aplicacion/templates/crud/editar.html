@@ -1,0 +1,22 @@
+{% extends "plantilla.html" %}
+
+{% block titulo %}Editar requerimiento{% endblock %}
+
+{% block contenido %}
+
+    <div class="card">
+        <div class="card-header">
+            Editar informacion del requerimiento
+        </div>
+        <div class="card-body">
+            <h4 class="card-title">Datos del requerimiento</h4>
+
+            {% include 'crud/form.html' %}
+
+        </div>
+        <div class="card-footer text-muted">
+            
+        </div>
+    </div>
+
+{% endblock %}

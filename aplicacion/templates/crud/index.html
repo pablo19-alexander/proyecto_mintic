@@ -1,0 +1,46 @@
+{% extends "plantilla.html" %}
+
+{% block titulo %}Lista de requerimientos{% endblock %}
+
+{% block contenido %}
+
+<div class="card">
+    <div class="card-header">
+        REQUERIMIENOS DE REQUERIMIENOS
+    </div>
+    <div class="card-body">
+        <div class="mb-3 d-flex justify-content-between">
+            <h4 class="card-title">Lista de requerimientos</h4>
+            <a name="" id="" class="btn btn-success" href="{% url 'crear' %}" role="button">Agregar nuevo requerimiento</a>
+        </div>
+        <div class="table-responsive">
+            <table class="table">
+                <thead class="table-dark">
+                    <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Tipo de negocio</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="">
+                        <td scope="row">R1C1</td>
+                        <td>R1C2</td>
+                        <td>R1C3</td>
+                        <td><a name="" id="" class="btn btn-info" href="{% url 'editar' %}" role="button">Editar</a> 
+                            |
+                            <a name="" id="" class="btn btn-danger" href="#" role="button">Borrar</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+
+    </div>
+    <div class="card-footer text-muted">
+        
+    </div>
+</div>
+
+{% endblock %}
