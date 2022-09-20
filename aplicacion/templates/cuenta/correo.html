@@ -23,43 +23,12 @@
          </div>
 				<div class="myform form ">
 					 <div class="logo mb-3">
-						 <div class="col-md-12 text-center">
-							<h1>Login</h1>
-						 </div>
+                        <div class="text-center">
+                            <div class="card-header border border-0">
+                            <h1 class="h4 text-gray-900 mb-2">Se ha enviado a su correo la contraseña</h1>
+                      
 					</div>
-               
-               <form method="post">
-                  {% csrf_token %}
-                  <div class="form-group">
-                     <label for="exampleInputEmail1">{{form.email.label}}</label>
-                     {{form.email}}
-                  </div>
-                  <div class="form-group">
-                     <label for="exampleInputEmail1">{{form.password.label}}</label>
-                     {{form.password}} 
-                  </div>
-                  <div class="form-group">
-                     <p class="text-center">Has olvidado tu contraseña?<a href="{% url 'password' %}"> Cambiar contraseña</a></p>
-                  </div>
-                  <div class="col-md-12 text-center ">
-                     <button type="submit" class=" btn btn-block mybtn btn-primary tx-tfm">Acceder</button>
-                  </div>
-                  <div class="col-md-12 ">
-                     <div class="login-or">
-                        <hr class="hr-or">
-                        <span class="span-or">O</span>
-                     </div>
-                  </div>
-                  <div class="form-group">
-                     <p class="text-center">No tienes una cuenta? <a href="{% url 'registro' %}" id="signup">Registrate aquí</a></p>
-                  </div>
-               </form>
-                 
-				</div>
-			</div>
-		</div>
-      </div>   
-   
+
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->

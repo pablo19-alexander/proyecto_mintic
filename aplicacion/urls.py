@@ -9,6 +9,8 @@ urlpatterns = [
     path('registro', views.registro, name='registro'),
     path('login', views.login, name='login'),
     path('mensage', views.registro, name='mensage'),
+    path('password', views.password, name='password'), 
+    path('correo', views.correo, name='correo'),  
   
     
 # ---------- crud -----------------------------------------

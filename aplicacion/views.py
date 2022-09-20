@@ -17,6 +17,7 @@ def nosotros(request):
 
 def mas(request):
     return render(request, 'paginas/mas.html')
+
 #----------- cuenta ---------------------------------------
 def registro(request):
     contexto = dict()
@@ -64,6 +65,14 @@ def login(request):
     else:
         form = LoginForm()
         return render(request, 'cuenta/login.html', {'form': form})
+    
+#----------- contraseña ---------------------------------------    
+def password(request):
+    return render(request, "cuenta/password.html")
+
+def correo(request):
+    return render(request, "cuenta/correo.html")
+
 # ---------- crud -----------------------------------------
 
 def crud(request):#mostramos la lista de requerimientos
@@ -89,3 +98,6 @@ def eliminar(request, id):
     item = Item.objects.get(id=id)
     item.delete()
     return redirect('crud')
+
+
+
