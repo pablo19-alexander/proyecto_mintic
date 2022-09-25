@@ -5,6 +5,7 @@
 {% block contenido %}
 
     <div class="d-flex justify-content-center">
+        {% include 'mensaje.html' %}
         <div class="card w-50 shadow bg-body rounded border border-0">
             
             <div class="card-header border border-0">
@@ -28,9 +29,11 @@
                         <div class="col-auto d-flex">
         
                             <button type="reset" class="btn btn-secondary btn-sm me-auto p-2">Limpiar</button>
-                            <a name="" id="" class="btn btn-danger btn-sm p-2 me-1" href="{% url 'inicio' %}" role="button">Cancelar</a>
-                            <button type="submit" class="btn btn-primary btn-sm p-2">guardar registro</button>
-        
+                            <a name="" id="" class="btn btn-danger btn-sm p-2 me-1" href="{% url 'inicio' %}" role="button">Volver al inicio</a>
+                            <button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Verificar registro
+                            </button>
+
                         </div>
                     </div>
 

@@ -7,7 +7,8 @@ urlpatterns = [
     path('mas', views.mas, name='mas'),
 #----------- cuenta ---------------------------------------
     path('registro', views.registro, name='registro'),
-    path('login', views.login, name='login'),
+    path('login', views.login_user, name='login'),
+    path('logout', views.logout_user, name='logout'),
     path('mensage', views.registro, name='mensage'),
 # ---------- crud -----------------------------------------
     path('crud', views.crud, name='crud'),

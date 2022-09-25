@@ -24,11 +24,11 @@ class ItemForm(forms.ModelForm):
 #---------------- form deregistro
 class UserForm(forms.ModelForm):
     
-    username = forms.CharField(max_length=150, label='Usuario', widget=forms.TextInput(
-        attrs={
-            'class': 'form-control',
-        }
-    ))
+    # username = forms.CharField(max_length=150, label='Usuario', widget=forms.TextInput(
+    #     attrs={
+    #         'class': 'form-control',
+    #     }
+    # ))
     
     password = forms.CharField(max_length=80, label='password', widget=forms.PasswordInput(
         attrs={
@@ -36,7 +36,7 @@ class UserForm(forms.ModelForm):
         }
     ))
     
-    email = forms.EmailField(label='E-mail', widget=forms.EmailInput(
+    email = forms.EmailField(label='E-mail', required= True, widget=forms.EmailInput(
         attrs={
             'class': 'form-control',
         }
@@ -56,7 +56,7 @@ class UserForm(forms.ModelForm):
         
     class Meta: 
         model = User
-        fields = ['username', 'first_name', 'last_name', 'email', 'password']
+        fields = ['first_name', 'last_name', 'email', 'password']
 #---------------- login ----------------------------------------------------------------        
 class LoginForm(forms.Form):
     email = forms.EmailField(label='Correo', widget=forms.EmailInput(
