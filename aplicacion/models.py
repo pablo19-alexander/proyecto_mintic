@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import AbstractUser, PermissionsMixin
 
 # Create your models here.
 tipoNegocio = (
@@ -20,3 +21,13 @@ class Item(models.Model):
     def __str__(self):
         item = "DESCRIPCION DEL REQUERIMIENTO: " + self.descripcion
         return item
+    
+class UserProfile(AbstractUser, PermissionsMixin):
+    email = models.EmailField(
+            ('email address'), 
+            unique=True
+        )
+    USERNAME_FIELD = 'email'
+    REQUIRED_FIELDS = ['username']
+    class Meta:
+        abstract = True
