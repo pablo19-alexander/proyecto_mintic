@@ -69,7 +69,7 @@ def login_user(request):
 
 def logout_user(request):
     logout(request)
-    return redirect(reverse('login'))
+    return redirect(reverse('inicio'))
 
 # ---------- crud -----------------------------------------
 
