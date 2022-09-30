@@ -1,25 +1,13 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
+{% extends "plantilla.html" %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link type="text/css" href="{% static "css/login.css" %}" rel="stylesheet"/>
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-</head>
+{% block titulo %}Registro{% endblock %}
 
 {% block contenido %}
 
     <div class="d-flex justify-content-center">
         {% include 'mensaje.html' %}
         <div class="card w-50 shadow bg-body rounded border border-0">
-            <div class="form-group">
-                <a name="" id="" class="btn btn-warning" href="{% url 'inicio' %}" role="button">Regresar a la pagina de inicio</a>
+            
             <div class="card-header border border-0">
                 <h3 class="card-title text-center mt-1 mb-0">REGISTRO</h3>
             </div>
@@ -41,9 +29,11 @@
                         <div class="col-auto d-flex">
         
                             <button type="reset" class="btn btn-secondary btn-sm me-auto p-2">Limpiar</button>
-                            <a name="" id="" class="btn btn-danger btn-sm p-2 me-1" href="{% url 'inicio' %}" role="button">Cancelar</a>
-                            <button type="submit" class="btn btn-primary btn-sm p-2">Guardar registro</button>
-        
+                            <a name="" id="" class="btn btn-danger btn-sm p-2 me-1" href="{% url 'inicio' %}" role="button">Volver al inicio</a>
+                            <button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Verificar registro
+                            </button>
+
                         </div>
                     </div>
 
