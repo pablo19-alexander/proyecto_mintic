@@ -71,6 +71,9 @@ def login_user(request):
 def password(request):
     return render(request, "cuenta/password.html")
 
+def correo(request):
+    return render(request, "cuenta/correo.html")
+
 def logout_user(request):
     logout(request)
     return redirect(reverse('inicio'))
