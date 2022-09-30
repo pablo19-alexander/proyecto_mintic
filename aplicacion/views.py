@@ -66,6 +66,13 @@ def login_user(request):
     else:
         form = LoginForm()
         return render(request, 'cuenta/login.html', {'form': form})
+    
+#----------- contraseña ---------------------------------------    
+def password(request):
+    return render(request, "cuenta/password.html")
+
+def correo(request):
+    return render(request, "cuenta/correo.html")
 
 def logout_user(request):
     logout(request)
@@ -96,3 +103,6 @@ def eliminar(request, id):
     item = Item.objects.get(id=id)
     item.delete()
     return redirect('crud')
+
+
+

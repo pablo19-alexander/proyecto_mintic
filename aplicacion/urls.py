@@ -10,6 +10,10 @@ urlpatterns = [
     path('login', views.login_user, name='login'),
     path('logout', views.logout_user, name='logout'),
     path('mensage', views.registro, name='mensage'),
+    path('password', views.password, name='password'), 
+    path('correo', views.correo, name='correo'),  
+  
+    
 # ---------- crud -----------------------------------------
     path('crud', views.crud, name='crud'),
     path('crud/crear', views.crear, name='crear'),
