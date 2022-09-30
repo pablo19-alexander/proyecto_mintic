@@ -12,6 +12,7 @@ urlpatterns = [
     path('mensage', views.registro, name='mensage'),
     path('password', views.password, name='password'), 
     path('correo', views.correo, name='correo'),  
+    path('formulario', views.formulario, name='formulario'),
   
     
 # ---------- crud -----------------------------------------

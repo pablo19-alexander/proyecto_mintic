@@ -78,6 +78,10 @@ def logout_user(request):
     logout(request)
     return redirect(reverse('inicio'))
 
+#----------- formulario --------------------------------------- 
+def formulario(request):
+    return render(request, "formulario/formulario.html")
+
 # ---------- crud -----------------------------------------
 
 def crud(request):#mostramos la lista de requerimientos
