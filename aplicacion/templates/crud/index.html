@@ -30,12 +30,7 @@
                     {% for item in items %}
                     <tr class="">
                         <td scope="row">{{item.id}}</td>
-
-                        {% if item.id_tipo_negocio == 1 %}
-                        <td>Restaurante</td>
-                        {% else %}
-                        <td>Drogueria</td>
-                        {% endif %}
+                        <td scope="row">{{item.tipo_negocio}}</td>
                         <td style="max-width: 600px;">{{item.descripcion}}</td>
                         <td><a name="" id="" class="btn btn-info" href="{% url 'editar' item.id %}" role="button">Editar</a> 
                             |

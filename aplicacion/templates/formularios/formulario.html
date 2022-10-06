@@ -1,0 +1,37 @@
+{% extends "plantilla.html" %}
+
+{% block titulo %}¿Que negocio tienes?{% endblock %}
+
+{% block contenido %}
+
+<div class="d-flex justify-content-center mt-4">
+    <div class="card w-50 shadow bg-body rounded border border-0">
+            <div class="card-header border border-0">
+                <h3 class="card-title text-center mt-1 mb-0">¿Que negocio tienes?</h3>
+            </div>
+            <div class="card-body row g-3 d-flex justify-content-center mb-0">
+                <form method="post" class="row g-3 d-flex justify-content-center mb-0">
+                    <p class="fs-6 mt-4">Seleccione el tipo de formulario que desea diligenciar:</p>
+                    {% csrf_token %}
+                    {% for campo in seleccion %}
+                        <div class="mb-5 mt-4 col-md-8">
+                        
+                            {{campo}}
+
+                        </div>
+                    {% endfor %}
+                    
+                    <div class="d-flex justify-content-end mt-4">
+                        <a href="{% url 'inicio' %}" class="btn btn-secondary btn-sm p-2 me-1" role="button">Volver al inicio</a>
+                        <button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            Realizar formulario
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="card-footer text-muted border border-0">
+        </div>
+    </div>
+</div>
+
+{% endblock %}
