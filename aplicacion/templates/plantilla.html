@@ -34,14 +34,16 @@
                         <li><a class="link" href="{% url 'inicio' %}">Inicio</a></li>
                         <li><a class="link" href="{% url 'nosotros' %}">Nosotros</a></li>
                         <li><a class="link" href="{% url 'mas' %}">Leer mas</a></li>
+                        {% if user.is_superuser == True %}
                         <li><a class="link" href="{% url 'crud' %}">Crud</a></li>
+                        {% endif %}
                         <li>
                           {% if user.is_authenticated %}
                             <div class="desplegable">
                               <input type="text" class="textBox" value="{{user.first_name}} {{user.last_name}}" readonly>
                                 <div class="option">
                                   <div onclick="show('encuesta')">
-                                    <a class="item" href="#"><ion-icon name="reader-outline"></ion-icon> Realizar encuesta</a>
+                                    <a class="item" href="{% url 'formulario' %}"><ion-icon name="reader-outline"></ion-icon> Realizar encuesta</a>
                                   </div>
                                   <div onclick="show('cerrar')">
                                     <a class="item" href="{% url 'logout' %}"><ion-icon name="exit-outline"></ion-icon> Cerrar sesion</a>

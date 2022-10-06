@@ -1,0 +1,32 @@
+{% extends "plantilla.html" %}
+
+{% block titulo %}Formulario de restaurante{% endblock %}
+
+{% block contenido %}
+    <div class="table-responsive">
+        <table class="table">
+            <thead class="table-dark">
+
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Requerimiento</th>
+                    <th scope="col">Respuesta</th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+                <form method="post" class="row g-3 d-flex justify-content-center mb-0">
+                    {% csrf_token %}
+                    {% for requerimiento in requerimientos %}
+                        <tr>
+                            <th scope="row">{{requerimiento.id}} </th>
+                            <td style="max-width: 600px;">{{requerimiento}}</td>
+                            <td>cumples con este requerimiento: {{requerimiento.label}}</td>
+                        </tr>
+                    {% endfor %}
+                </form>
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
